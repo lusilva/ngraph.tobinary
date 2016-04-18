@@ -44,8 +44,7 @@ function save(graph, options) {
       nodeCount: graph.getNodesCount(),
       linkCount: graph.getLinksCount(),
       nodeFile: options.labels,
-      linkFile: options.links,
-      version: require(path.join(__dirname, 'package.json')).version
+      linkFile: options.links
     };
   }
 
