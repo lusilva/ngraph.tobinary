@@ -16,6 +16,9 @@ function save(graph, options) {
 
   var labels = require('./lib/getLabels.js')(graph);
   saveLabels(labels);
+  labels = labels.map(function(label) {
+    return label.id;
+  });
 
   var linksBuffer = require('./lib/getLinksBuffer.js')(graph, labels);
   fs.writeFileSync(options.links, linksBuffer);
